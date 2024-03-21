@@ -1,6 +1,8 @@
 package projeto;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.TreeSet;
 
 public class Main {
 	
@@ -16,8 +18,8 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
-		// Definindo 100 milhões para ser armazenado
-		Integer quantNumSort = 100_000_000;
+		// Definindo 100 milhões de números para serem armazenados e procurados
+		int quantNumSort = 100_000_000;
 		
 		/*
 		 * Considerando os conceitos estudados nas disciplinas “Estrutura de Dados” e
@@ -27,8 +29,23 @@ public class Main {
 		 * LinkedList e TreeSet.
 		 */
 		
-		ArrayList<Integer> verificar = new ArrayList<Integer>();
-		TabelaHash tabelaArrayList = new TabelaHash(11, verificar);
+		/*
+		 * OBS: Utilizei uma instância do tipo da tabela hash em cada construtor apenas para
+		 * eles serem criados da maneira certa, de acordo com o seu tipo, e fazer apenas uma
+		 * classe de TabelaHash
+		 */
+		
+		// CRIAÇÃO DE TABELA HASH DE ARRAYLIST
+		ArrayList<Integer> verificarAL = new ArrayList<Integer>();
+		TabelaHash tabelaArrayList = new TabelaHash(11, verificarAL);
+		
+		// CRIAÇÃO DE TABELA HASH DE LINKEDLIST
+		LinkedList<Integer> verificarLL = new LinkedList<Integer>();
+		TabelaHash tabelaLinkedList = new TabelaHash(11, verificarLL);
+		
+		// CRIAÇÃO DE TABELA HASH DE LINKEDLIST
+		TreeSet<Integer> verificarTS = new TreeSet<Integer>();
+		TabelaHash tabelaTreeSet = new TabelaHash(11, verificarTS);
 		
 	}
 
