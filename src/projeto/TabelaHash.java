@@ -84,7 +84,6 @@ public class TabelaHash {
 		}else {
 			return resposta;
 		}
-		
 	}
 	
 	// Insert e Search TreeSet
