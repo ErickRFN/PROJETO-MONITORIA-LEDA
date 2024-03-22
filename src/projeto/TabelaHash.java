@@ -60,13 +60,13 @@ public class TabelaHash {
 		this.tabelaArrayList[numero % this.tamanho].add(numero);
 	}
 	
-	public int searchTabArrayList(Integer numero) throws Exception {
+	public int searchTabArrayList(Integer numero) {
 		int resposta = this.tabelaArrayList[numero % this.tamanho].indexOf(numero);
 		
 		if(resposta != -1) {
 			return numero;
 		}else {
-			throw new Exception("ELEMENTO NÃO ENCONTRADO");
+			return resposta;
 		}
 		
 	}
@@ -76,13 +76,13 @@ public class TabelaHash {
 		this.tabelaLinkedList[numero % this.tamanho].add(numero);
 	}
 	
-	public int searchTabLinkedList(Integer numero) throws Exception {
+	public int searchTabLinkedList(Integer numero) {
 		int resposta = this.tabelaLinkedList[numero % this.tamanho].indexOf(numero);
 		
 		if(resposta != -1) {
 			return numero;
 		}else {
-			throw new Exception("ELEMENTO NÃO ENCONTRADO");
+			return resposta;
 		}
 		
 	}
@@ -92,14 +92,13 @@ public class TabelaHash {
 		this.tabelaTreeSet[numero % this.tamanho].add(numero);
 	}
 	
-	public int searchTabTreeSet(Integer numero) throws Exception {
+	public int searchTabTreeSet(Integer numero) {
 		boolean resposta = this.tabelaTreeSet[numero % this.tamanho].contains(numero);
 		
 		if(resposta) {
-			System.out.println(numero);
 			return numero;
 		}else {
-			throw new Exception("ELEMENTO NÃO ENCONTRADO");
+			return -1;
 		}
 		
 	}
